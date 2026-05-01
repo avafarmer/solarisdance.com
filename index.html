@@ -1,42 +1,249 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solaris Dance</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-        .container {
-            text-align: center;
-            padding: 2rem;
-        }
-        h1 {
-            font-size: 3rem;
-            font-weight: 200;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-        p {
-            font-size: 1.1rem;
-            color: #888;
-            font-weight: 300;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Solaris Dance</h1>
-        <p>Coming soon</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solaris Dance | Private Dance Lessons</title>
+    <meta
+      name="description"
+      content="Book private dance lessons with Solaris Dance. Schedule online with Google Calendar and pay your deposit before your appointment."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Solaris Dance navigation">
+      <a class="brand" href="#top" aria-label="Solaris Dance home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Solaris Dance</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#lessons">Lessons</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="https://www.instagram.com/solaris.dance/" target="_blank" rel="noreferrer">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="nav-booking" type="button" data-booking-trigger>
+          Book a Lesson
+        </button>
+        <a class="signin-link" href="https://calendar.google.com/" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 21a8 8 0 0 0-16 0"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Sign in</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="hero-photo" aria-labelledby="hero-title">
+        <img src="./assets/solaris-dance-instructor.jpeg" alt="Solaris Dance instructor in performance costume" />
+        <div class="photo-shade" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <h1 id="hero-title">Private<br />Dance Lessons</h1>
+          <div class="gold-rule" aria-hidden="true"></div>
+          <p>Personalized instruction. Real progress.<br />You set the goals, I'll help you move<br />with confidence.</p>
+
+          <div class="lesson-cards" id="lessons" aria-label="Featured lesson options">
+            <button class="lesson-card is-active" type="button" data-select-lesson="private1hr">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="9"></circle></svg>
+              </span>
+              <span>
+                <strong>1 hr Private Lesson</strong>
+                <b>$20</b>
+                <small>Deposit $10</small>
+              </span>
+            </button>
+            <button class="lesson-card" type="button" data-select-lesson="choreography">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="9"></circle></svg>
+              </span>
+              <span>
+                <strong>Choreography</strong>
+                <b>DM</b>
+                <small>Solos, Duets, Etc</small>
+              </span>
+            </button>
+            <button class="lesson-card" type="button" data-select-lesson="cleaning1hr">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="9"></circle></svg>
+              </span>
+              <span>
+                <strong>Choreography Cleaning Session</strong>
+                <b>$20/hr</b>
+                <small>Deposit $10</small>
+              </span>
+            </button>
+          </div>
+
+          <div class="rating-line" aria-label="Experienced dancer teaching private lessons for two years">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"></path>
+            </svg>
+            <strong>2 years</strong>
+            <span>teaching private lessons from real dance experience</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="schedule" class="booking-panel" aria-labelledby="schedule-title">
+        <div class="panel-topline">
+          <div class="schedule-title-wrap">
+            <span class="calendar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                <path d="M16 2v4M8 2v4M3 10h18M9 15h6"></path>
+              </svg>
+            </span>
+            <h2 id="schedule-title">Schedule with Google Calendar</h2>
+          </div>
+          <div class="google-wordmark" aria-label="Google Calendar">
+            <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+            <span>Calendar</span>
+          </div>
+        </div>
+
+        <ol class="booking-steps" aria-label="Booking steps">
+          <li class="is-current"><span>1</span>Choose Time</li>
+          <li><span>2</span>Your Details</li>
+          <li><span>3</span>Payment</li>
+        </ol>
+
+        <div class="booking-main google-booking-main">
+          <iframe
+            class="inline-booking-frame"
+            title="Live Solaris Dance Google appointment times"
+            data-inline-booking-frame
+            hidden
+          ></iframe>
+          <div class="live-booking-placeholder" data-inline-setup>
+            <span class="calendar-icon large" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                <path d="M16 2v4M8 2v4M3 10h18M8 15h3M13 15h3"></path>
+              </svg>
+            </span>
+            <h3>Live Google appointment times</h3>
+            <p>After your Google Appointment Schedule link is added, this area will show the exact open time slots from your calendar so clients can self-book.</p>
+            <button class="secondary-booking" type="button" data-booking-trigger>
+              Open Booking Flow
+            </button>
+          </div>
+        </div>
+
+        <div id="pricing" class="booking-footer">
+          <div class="lesson-select-wrap">
+            <label for="lesson-type">Lesson Type</label>
+            <select id="lesson-type" name="lesson-type">
+              <option value="private1hr">Private Lessons - $20/hr</option>
+              <option value="private2hr">2 hr Private Lesson - $40</option>
+              <option value="private3hr">3 hr Private Lesson - $60</option>
+              <option value="choreography">Choreography - DM to book</option>
+              <option value="cleaning1hr">Choreography Cleaning Session - $20/hr</option>
+            </select>
+          </div>
+
+          <div class="investment">
+            <h3>Your Investment</h3>
+            <dl>
+              <div>
+                <dt>Deposit due today</dt>
+                <dd data-deposit>$10.00</dd>
+              </div>
+              <div>
+                <dt>Balance due at lesson</dt>
+                <dd data-balance>$10.00</dd>
+              </div>
+              <div class="total-row">
+                <dt>Total</dt>
+                <dd data-total>$20.00 USD</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="checkout-row">
+          <div class="trust-items">
+            <span class="trust-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+                <path d="M8 11V8a4 4 0 0 1 8 0v3M12 15v2"></path>
+              </svg>
+              <span><strong>Secure checkout</strong><small>Your payment is encrypted</small></span>
+            </span>
+            <span class="trust-item">
+              <span class="calendar-badge" aria-hidden="true">31</span>
+              <span><strong>Syncs with Google Calendar</strong><small>Events and reminders included</small></span>
+            </span>
+          </div>
+          <button class="pay-button" type="button" data-booking-trigger>
+            Book &amp; Pay Deposit
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <section id="about" class="below-fold services-section">
+      <div class="services-copy">
+        <h2>Private Lessons for Illuminated Movement</h2>
+        <p>Movement, Illuminated. Private instruction shaped around your goals.</p>
+        <div class="service-grid" aria-label="Solaris Dance services">
+          <article>
+            <h3>Private Lessons</h3>
+            <p>$20/hr for technique, skills, combos, and tryout prep.</p>
+          </article>
+          <article>
+            <h3>Choreography</h3>
+            <p>Solos, duets, trios, teams, waltzes, and quinceaneras.</p>
+          </article>
+          <article>
+            <h3>Choreography Cleaning Sessions</h3>
+            <p>$20/hr for polishing details, timing, transitions, and performance quality.</p>
+          </article>
+        </div>
+        <div id="contact" class="contact-note">
+          <h2>Ready when your calendar is.</h2>
+          <p>Choose a service, reserve an available Google appointment time, and pay the deposit before your lesson.</p>
+          <a class="instagram-link" href="https://www.instagram.com/solaris.dance/" target="_blank" rel="noreferrer">@solaris.dance</a>
+        </div>
+      </div>
+      <figure class="pricing-sheet-preview">
+        <img src="./assets/solaris-dance-pricing.png" alt="Solaris Dance services pricing sheet" />
+        <figcaption>Services and starting rates</figcaption>
+      </figure>
+    </section>
+
+    <div class="booking-modal" data-booking-modal hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" data-close-modal aria-label="Close booking window">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+        </button>
+        <div class="modal-heading">
+          <h2 id="modal-title">Book with Solaris Dance</h2>
+          <p data-modal-subtitle>Google Calendar appointment scheduling opens here.</p>
+        </div>
+        <iframe
+          class="booking-frame"
+          title="Solaris Dance Google Calendar booking page"
+          data-booking-frame
+          hidden
+        ></iframe>
+        <div class="setup-panel" data-setup-panel hidden>
+          <h3>Connect your Google booking page</h3>
+          <p>Add your Google Calendar appointment schedule link in <strong>app.js</strong>, then this button will open the live booking and payment flow.</p>
+          <a href="https://calendar.google.com/" target="_blank" rel="noreferrer">Open Google Calendar</a>
+        </div>
+      </section>
     </div>
-</body>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
